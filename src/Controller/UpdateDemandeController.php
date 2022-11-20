@@ -20,7 +20,6 @@ class UpdateDemandeController
 	public function __invoke(
 		Demandes $data,
 		Request $request,
-		SmsSendNotification $smsSendNotification,
 		AddDemandes $addDemandes,
 		ObjectNormalizer $normalizer,
 		EntityManagerInterface $manager

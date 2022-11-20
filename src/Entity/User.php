@@ -35,13 +35,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 			'path'=>'/utilisateur/{id}/edition',
 			'denormalization_context'=>['groups'=>['put:itemUser']]
 		],
-		'changer-avatar'=>[
-			'method'=>'post',
-			'path'=>'/utilisateur/{id}/image',
-			'deserialize'=>false,
-			'controller'=>UpdateAvatarController::class,
-			'denormalization_context'=>[ 'groups'=>['put:avatar']]
-		],
 		'changer-password'=>[
 			'method'=>'put',
 			'path'=>'/utilisateur/{id}/password-reset',

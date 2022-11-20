@@ -41,9 +41,4 @@ class MailerService
 
 		$this->mailer->send($email);
 	}
-
-	public function verificationEmail()
-	{
-
-	}
 }

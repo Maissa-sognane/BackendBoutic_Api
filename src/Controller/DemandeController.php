@@ -15,11 +15,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Normalizer;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-use Infobip\Configuration;
-use Infobip\Api\SendSmsApi;
-use Infobip\Model\SmsDestination;
-use Infobip\Model\SmsTextualMessage;
-use Infobip\Model\SmsAdvancedTextualRequest;
 
 class DemandeController
 {
@@ -81,18 +76,7 @@ class DemandeController
 			);
 		}else{
 
-			$contentSms = 'Bonjour '.$dataDemandeTab['representant'].',
-votre demande de devis est en cour de traitement.
-Merci  pour la confiance.
-A tres bientot! 
-Maissa Sognane';
-			$nomAdmin = 'Admin';
-			$numeroAdmin = '00221780196884';
-			$contentSmsAdmin = 'Bonjour '.$nomAdmin.',
-une demande de devis a ete enregistré au nom de '.$dataDemandeTab['representant'].' .
-Merci!';
-			//	$smsSendNotification->sendSms($dataDemandeTab['numeroTelephoneRepresentant'], $contentSms);
-			//	$smsSendNotification->sendSms($numeroAdmin, $contentSmsAdmin);
+
 				$manager->persist($demandeJson);
 				$manager->flush();
 				$mailerService->sendEmail(

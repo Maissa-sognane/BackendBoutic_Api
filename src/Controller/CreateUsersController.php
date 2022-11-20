@@ -26,15 +26,6 @@ class CreateUsersController
 		}
 		return $addUsers->serviceAddUser($usersTab);
 
-
-		//dd($validator->validate($usersJson)[0]->getMessage());
-		/*
-		$response = new JsonResponse(
-			json_encode($usersTab),
-			Response::HTTP_CREATED,
-			headers: ['Content-Type', 'application/json']
-		);
-		*/
 	}
 
 }
